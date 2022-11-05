@@ -1,0 +1,32 @@
+*{
+    box-sizing: border-box;
+    margin: 0 auto;
+    
+}
+.Home{
+    box-sizing: border-box;
+    border: solid 8px ;
+    border-radius: 8px;
+    margin: 30px 40px;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    width: 500px;
+    height: 300px;
+
+}
+button{
+    background-color: #282c34;
+    color: aqua;
+    border-radius: 8px;
+    border-color: aqua;
+    margin: 20px 10px;
+    padding: 5px 7px;
+}
+a{
+    text-decoration: none;
+    color: aqua;
+    background-color: #282c34;
+}
