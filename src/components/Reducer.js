@@ -1,5 +1,7 @@
 import React from "react";
+import "./styles.css";
 import { useReducer } from "react";
+import Navbar from "./Navbar/Navbar";
 
 const initialState = { count: 0 };
 
@@ -16,7 +18,7 @@ function setValue(state, action) {
   }
 }
 
-function Counter() {
+function Reducer() {
   const [state, dispatch] = useReducer(setValue, initialState);
 
   const handleIncrement = () => dispatch({ type: "increment" });
@@ -24,13 +26,19 @@ function Counter() {
   const handleDecrement = () => dispatch({ type: "decrement" });
 
   return (
-    <div>
-      <h2>{state.count}</h2>
-      <button onClick={handleIncrement}>Increase</button>
-      <button onClick={handleReset}>Reset</button>
-      <button onClick={handleDecrement}>Decrease</button>
+    <div className="Reducer">
+    <Navbar />
+      <div className="Container ">
+        <div>
+          <h1>Counter</h1>
+          <h2>{state.count}</h2>
+          <button onClick={handleIncrement}>Increase</button>
+          <button onClick={handleReset}>Reset</button>
+          <button onClick={handleDecrement}>Decrease</button>
+        </div>
+      </div>
     </div>
   );
 }
 
-export default Counter;
+export default Reducer;
