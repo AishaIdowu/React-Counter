@@ -19,12 +19,16 @@ function setValue(state, action) {
 function Counter() {
   const [state, dispatch] = useReducer(setValue, initialState);
 
+  const handleIncrement = () => dispatch({ type: "increment" });
+  const handleReset = () => dispatch({ type: "reset" });
+  const handleDecrement = () => dispatch({ type: "decrement" });
+
   return (
     <div>
       <h2>{state.count}</h2>
-      <button onClick={() => dispatch({ type: "increment" })}>Increase</button>
-      <button onClick={() => dispatch({ type: "reset" })}>Reset</button>
-      <button onClick={() => dispatch({ type: "decrement" })}>Decrease</button>
+      <button onClick={handleIncrement}>Increase</button>
+      <button onClick={handleReset}>Reset</button>
+      <button onClick={handleDecrement}>Decrease</button>
     </div>
   );
 }
