@@ -12,7 +12,7 @@ function setValue(state, action) {
     case "reset":
       return { count: (state.count = 0) };
     default:
-      throw new Error();
+      throw new Error("Oops");
   }
 }
 
